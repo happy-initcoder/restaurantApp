@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^4.0.3
+  flutter_signin_button: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -66,7 +67,7 @@ flutter:
     - assets/images/Illustrations3.png
     - assets/images/Illustrations4.png
     - assets/images/g12.png
-
+    - assets/images/coffee.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

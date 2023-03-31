@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:restaurantapp/screens/forgetPassword.dart';
 import 'package:restaurantapp/screens/getStartedpage.dart';
 import 'package:restaurantapp/screens/loginScreen.dart';
+import 'package:restaurantapp/screens/resetMessage.dart';
 
 void main() {
   runApp(const MyApp());
