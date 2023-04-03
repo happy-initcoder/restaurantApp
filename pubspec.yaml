@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^4.0.3
   flutter_signin_button: ^2.0.0
+  country_code_picker: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,8 @@ flutter:
     - assets/images/Illustrations4.png
     - assets/images/g12.png
     - assets/images/coffee.png
+    - assets/images/Facebook2.png
+    - assets/images/Google.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

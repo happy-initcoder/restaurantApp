@@ -19,8 +19,10 @@ class ResetEmailScreen extends StatelessWidget {
             padding: EdgeInsets.only(left: size.width * .05),
             child: Align(
               alignment: Alignment.bottomLeft,
-              child: Text('Reset email sent',
-                  style: TextStyle(fontSize: size.width / 10)),
+              child: Text(
+                'Reset email sent',
+                style: TextStyle(fontSize: size.width / 10),
+              ),
             ),
           ),
           Padding(
@@ -58,12 +60,13 @@ class ResetEmailScreen extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(
-                    horizontal: size.width / 3, vertical: size.height / 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                primary: Color.fromRGBO(238, 167, 52, 1)),
+              padding: EdgeInsets.symmetric(
+                  horizontal: size.width / 3, vertical: size.height / 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              primary: Color.fromRGBO(238, 167, 52, 1),
+            ),
             onPressed: () {},
             child: Text(
               'SEND AGAIN',
