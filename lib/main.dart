@@ -3,8 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:restaurantapp/screens/createAccount.dart';
 import 'package:restaurantapp/screens/forgetPassword.dart';
 import 'package:restaurantapp/screens/getStartedpage.dart';
+import 'package:restaurantapp/screens/locationScreen.dart';
 import 'package:restaurantapp/screens/loginScreen.dart';
 import 'package:restaurantapp/screens/phoneNumberScreen.dart';
+import 'package:restaurantapp/screens/phoneVarificationScreen.dart';
 import 'package:restaurantapp/screens/resetMessage.dart';
 
 void main() {
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(),
         useMaterial3: true,
       ),
-      home: CreateAccount(),
+      home: LocationScreen(),
     );
   }
 }
