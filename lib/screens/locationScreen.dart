@@ -12,44 +12,78 @@ class LocationScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-              child: Center(
-            child: Column(
-              children: [
-                Text(
-                  'Find Restaurents near you',
-                  style: TextStyle(fontSize: size.width / 15),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 10),
-                  child: Text(
-                    'please enter your location or allow access to \n location to find restaurents near you',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: size.width / 25),
+            child: Center(
+              child: Column(
+                children: [
+                  Text(
+                    'Find Restaurents near you',
+                    style: TextStyle(
+                        fontSize: size.width / 15, fontWeight: FontWeight.bold),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(),
-                  child: ElevatedButton(
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: 10,
+                    ),
+                    child: Text(
+                      'Please enter your location or allow access to \n location to find restaurents near you',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: size.width / 25, color: Colors.grey),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 50),
+                    child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
+                        side: BorderSide(
+                          width: 1.0,
+                          color: Color.fromRGBO(238, 167, 52, 1),
+                        ),
                         padding: EdgeInsets.symmetric(
-                            horizontal: size.width / 2.5,
-                            vertical: size.height / 50),
+                            vertical: size.height / 50,
+                            horizontal: size.width / 4.2),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
-                        primary: Color.fromRGBO(238, 167, 52, 1),
+                        primary: Colors.white,
                       ),
                       onPressed: () {},
-                      child: Row(
-                        children: [
-                          Icon(CupertinoIcons.paperplane_fill),
-                          Text('Use current location'),
-                        ],
-                      )),
-                ),
-              ],
+                      icon: Icon(
+                        CupertinoIcons.paperplane_fill,
+                        color: Color.fromRGBO(238, 167, 52, 1),
+                      ),
+                      label: Text(
+                        'Use current location',
+                        style: TextStyle(
+                          color: Color.fromRGBO(238, 167, 52, 1),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ))
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+                left: size.width / 20, right: size.width / 20, top: 20),
+            child: Card(
+              color: Color.fromRGBO(251, 251, 251, 1),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  vertical: size.height / 45,
+                  horizontal: size.width / 8,
+                ),
+                child: TextField(
+                  decoration: InputDecoration.collapsed(
+                      hintText: 'Enter a new Address'),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
