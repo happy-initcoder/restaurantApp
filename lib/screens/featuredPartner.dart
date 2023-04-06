@@ -48,28 +48,145 @@ class FeaturedPartnersScreen extends StatelessWidget {
                         children: [
                           Container(
                             height: size.height / 3,
-                            width: size.width / 2.5,
+                            width: size.width / 2.3,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red),
+                              image: DecorationImage(
+                                  image: AssetImage('assets/images/no.png')),
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.red,
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 10, bottom: 10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        CupertinoIcons.clock,
+                                        size: 15,
+                                        color: Colors.white,
+                                      ),
+                                      Text(
+                                        '25min',
+                                        style: TextStyle(color: Colors.white),
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        CupertinoIcons.money_dollar,
+                                        color: Colors.white,
+                                        size: 15,
+                                      ),
+                                      Text(
+                                        'free',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      Spacer(),
+                                      Padding(
+                                        padding: EdgeInsets.only(right: 20),
+                                        child: Container(
+                                          child: Center(
+                                            child: Text('4.3',
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                          ),
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(5),
+                                            color:
+                                                Color.fromRGBO(238, 167, 52, 1),
+                                          ),
+                                          height: 20,
+                                          width: 40,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
                           Text("McDonald's", style: TextStyle(fontSize: 20)),
-                          Text('Chinese . American'),
+                          Text(
+                            'Chinese . American',
+                            style: TextStyle(color: Colors.grey),
+                          ),
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: size.width / 15),
+                        padding: EdgeInsets.only(
+                            left: size.width / 30, right: size.width / 30),
                         child: Column(
                           children: [
                             Container(
                               height: size.height / 3,
-                              width: size.width / 2.5,
+                              width: size.width / 2.3,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                      image:
+                                          AssetImage('assets/images/no.png')),
+                                  borderRadius: BorderRadius.circular(15),
                                   color: Colors.red),
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 10, bottom: 10),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          CupertinoIcons.clock,
+                                          size: 15,
+                                          color: Colors.white,
+                                        ),
+                                        Text(
+                                          '25min',
+                                          style: TextStyle(color: Colors.white),
+                                        )
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          CupertinoIcons.money_dollar,
+                                          color: Colors.white,
+                                          size: 15,
+                                        ),
+                                        Text(
+                                          'free',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        Spacer(),
+                                        Padding(
+                                          padding: EdgeInsets.only(right: 20),
+                                          child: Container(
+                                            child: Center(
+                                              child: Text('4.3',
+                                                  style: TextStyle(
+                                                      color: Colors.white)),
+                                            ),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(5),
+                                              color: Color.fromRGBO(
+                                                  238, 167, 52, 1),
+                                            ),
+                                            height: 20,
+                                            width: 40,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                             Text("McDonald's", style: TextStyle(fontSize: 20)),
-                            Text('Chinese . American'),
+                            Text('Chinese . American',
+                                style: TextStyle(color: Colors.grey)),
                           ],
                         ),
                       ),
