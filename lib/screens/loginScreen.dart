@@ -1,17 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:restaurantapp/screens/createAccount.dart';
+import 'package:restaurantapp/screens/featuredPartner.dart';
+import 'package:restaurantapp/screens/forgetPassword.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
-
+  static const routeName = '/Chat-Screen';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Center(
-          child: Text('Sign In'),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'Sign In',
+          style: TextStyle(fontSize: 16),
         ),
       ),
       body: Column(
@@ -31,87 +43,98 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
-                left: size.height * .02, right: size.height * .02),
-            child: TextFormField(
-              decoration: InputDecoration(hintText: 'EMAIL ADDRESS'),
+            padding: EdgeInsets.only(top: 10, bottom: 5, left: size.width / 20),
+            child: Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'EMAIL ADDRESS',
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: size.width / 35,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
-                left: size.height * .02, right: size.height * .02),
-            child: TextFormField(
-              decoration: InputDecoration(hintText: 'PASSWORD'),
+            padding:
+                EdgeInsets.only(left: size.width / 20, right: size.width / 20),
+            child: SizedBox(height: size.height / 25, child: TextField()),
+          ),
+          SizedBox(
+            height: size.height / 30,
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 10, left: size.width / 20),
+            child: Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'PASSWORD',
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: size.width / 35,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
+          Padding(
+            padding:
+                EdgeInsets.only(left: size.width / 20, right: size.width / 20),
+            child: SizedBox(height: size.height / 25, child: TextField()),
+          ),
           TextButton(
-            onPressed: () {},
-            child: Text('Forgot password?'),
+            onPressed: () {
+              Navigator.pushNamed(context, ForgetPassword.routeName);
+            },
+            child: Text(
+              'Forgot password?',
+              style: TextStyle(
+                color: Color.fromRGBO(238, 167, 52, 1),
+              ),
+            ),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(
-                  horizontal: size.width / 3, vertical: size.height / 50),
+                  horizontal: size.width / 2.7, vertical: size.height / 50),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
               primary: Color.fromRGBO(238, 167, 52, 1),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, FeaturedPartnersScreen.routeName);
+            },
             child: Text(
               'SIGN IN',
               style: TextStyle(color: Colors.white),
             ),
           ),
-          Row(children: [
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text('Dont have account?'),
             TextButton(
-              onPressed: () {},
-              child: Text('Create new account'),
+              onPressed: () {
+                Navigator.pushNamed(context, CreateAccount.routeName);
+              },
+              child: Text('Create new account',
+                  style: TextStyle(color: Color.fromRGBO(238, 167, 52, 1))),
             ),
           ]),
           Text('Or'),
-          SizedBox(
-            height: size.height * .07,
-            width: size.width * .9,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(
-                    horizontal: size.width / 4, vertical: size.height / 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                primary: Color.fromRGBO(57, 89, 152, 1),
-              ),
-              onPressed: () {},
-              child: Text(
-                'Connect with facebook',
-                style: TextStyle(color: Colors.white),
-              ),
+          Center(
+            child: InkWell(
+              onTap: () {},
+              child: Image.asset('assets/images/Facebook2.png'),
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 50,
+            height: size.height / 50,
           ),
-          SizedBox(
-            height: size.height * .07,
-            width: size.width * .9,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(
-                    horizontal: size.width / 4, vertical: size.height / 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                primary: Color.fromRGBO(66, 133, 244, 1),
-              ),
-              onPressed: () {},
-              child: Text(
-                'Connect with google',
-                style: TextStyle(color: Colors.white),
-              ),
+          Center(
+            child: InkWell(
+              onTap: () {},
+              child: Image.asset('assets/images/Google.png'),
             ),
-          ),
+          )
         ],
       ),
     );

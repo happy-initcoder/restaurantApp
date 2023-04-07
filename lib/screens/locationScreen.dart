@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 
 class LocationScreen extends StatelessWidget {
   const LocationScreen({super.key});
-
+  static const routeName = '/LocationScreen';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: Column(
         children: [
           Container(

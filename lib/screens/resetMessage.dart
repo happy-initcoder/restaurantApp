@@ -2,15 +2,23 @@ import 'package:flutter/material.dart';
 
 class ResetEmailScreen extends StatelessWidget {
   const ResetEmailScreen({super.key});
-
+  static const routeName = '/ResetEmailScreen';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text(
           'Forgot Password',
+          style: TextStyle(fontSize: 16),
         ),
       ),
       body: Column(

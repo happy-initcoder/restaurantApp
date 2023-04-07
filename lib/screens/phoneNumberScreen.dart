@@ -1,14 +1,26 @@
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurantapp/screens/phoneVarificationScreen.dart';
 
 class PhoneNumberScreen extends StatelessWidget {
   const PhoneNumberScreen({super.key});
-
+  static const routeName = '/PhoneNumberScreen';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login page'),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'Login page',
+          style: TextStyle(fontSize: 16),
+        ),
       ),
       body: Column(
         children: [
@@ -45,12 +57,22 @@ class PhoneNumberScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding:
-                EdgeInsets.only(left: size.width / 20, right: size.width / 20),
-            child: TextField(
-              keyboardType: TextInputType.number,
-            ),
+          Row(
+            children: [
+              Container(
+                width: size.width / 3,
+                child: CountryCodePicker(
+                  initialSelection: 'IT',
+                  favorite: ['+39', 'FR'],
+                ),
+              ),
+              Container(
+                width: size.width / 1.8,
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                ),
+              ),
+            ],
           ),
           SizedBox(height: size.height / 20),
           Center(
@@ -63,7 +85,9 @@ class PhoneNumberScreen extends StatelessWidget {
                 ),
                 primary: Color.fromRGBO(238, 167, 52, 1),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, phoneVarificationScreen.routeName);
+              },
               child: Text(
                 'SIGN UP',
                 style: TextStyle(color: Colors.white),

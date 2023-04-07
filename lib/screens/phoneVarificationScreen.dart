@@ -2,13 +2,23 @@ import 'package:flutter/material.dart';
 
 class phoneVarificationScreen extends StatelessWidget {
   const phoneVarificationScreen({super.key});
-
+  static const routeName = '/phoneVarificationScreen';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login to Foodly'),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'Login to Foodly',
+          style: TextStyle(fontSize: 16),
+        ),
       ),
       body: Column(
         children: [

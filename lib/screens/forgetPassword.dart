@@ -2,13 +2,23 @@ import 'package:flutter/material.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
-
+  static const routeName = '/ForgetPassword';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Forget Password'),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'Forget Password',
+          style: TextStyle(fontSize: 16),
+        ),
       ),
       body: Column(
         children: [

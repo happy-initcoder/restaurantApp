@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:restaurantapp/screens/loginScreen.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});
-
+  static const routeName = '/GetStartedPage';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    // var height = size.height;
-    // var width = size.width;
+
     return Scaffold(
       body: Column(
         children: [
@@ -49,10 +49,13 @@ class GetStartedPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height / 20),
-                        child: Image.asset('assets/images/Illustration.png'),
+                      Container(
+                        height: size.height / 2.5,
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                              top: MediaQuery.of(context).size.height / 20),
+                          child: Image.asset('assets/images/Illustration.png'),
+                        ),
                       ),
                       Text(
                         'Welcome',
@@ -107,11 +110,10 @@ class GetStartedPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * .01),
-                        child: Image.asset('assets/images/Illustrations2.png'),
-                      ),
+                      Container(
+                          height: size.height / 2.5,
+                          child:
+                              Image.asset('assets/images/Illustrations2.png')),
                       Text(
                         'All your favorite',
                         style: TextStyle(
@@ -165,10 +167,14 @@ class GetStartedPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height / 20),
-                        child: Image.asset('assets/images/Illustrations3.png'),
+                      Container(
+                        height: size.height / 2.5,
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                              top: MediaQuery.of(context).size.height / 20),
+                          child:
+                              Image.asset('assets/images/Illustrations3.png'),
+                        ),
                       ),
                       Text(
                         'Free delivery offers',
@@ -223,7 +229,10 @@ class GetStartedPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Image.asset('assets/images/Illustrations4.png'),
+                      Container(
+                          height: size.height / 2.5,
+                          child:
+                              Image.asset('assets/images/Illustrations4.png')),
                       Text(
                         'Choose your food',
                         style: TextStyle(
@@ -255,7 +264,9 @@ class GetStartedPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 primary: Color.fromRGBO(238, 167, 52, 1)),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, LoginScreen.routeName);
+            },
             child: Text(
               'Get Started',
               style: TextStyle(color: Colors.white),

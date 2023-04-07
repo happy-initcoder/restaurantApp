@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class FeaturedPartnersScreen extends StatelessWidget {
   const FeaturedPartnersScreen({super.key});
-
+  static const routeName = '/FeaturedPartnersScreen';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -31,8 +31,16 @@ class FeaturedPartnersScreen extends StatelessWidget {
           ],
         ),
         appBar: AppBar(
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
           title: Text(
             'Featured Partners',
+            style: TextStyle(fontSize: 16),
           ),
         ),
         body: Container(
@@ -51,7 +59,8 @@ class FeaturedPartnersScreen extends StatelessWidget {
                             width: size.width / 2.3,
                             decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage('assets/images/no.png')),
+                                  image: AssetImage('assets/images/no.png'),
+                                  fit: BoxFit.cover),
                               borderRadius: BorderRadius.circular(15),
                               color: Colors.red,
                             ),
@@ -126,8 +135,10 @@ class FeaturedPartnersScreen extends StatelessWidget {
                               width: size.width / 2.3,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
-                                      image:
-                                          AssetImage('assets/images/no.png')),
+                                      image: AssetImage(
+                                        'assets/images/no.png',
+                                      ),
+                                      fit: BoxFit.cover),
                                   borderRadius: BorderRadius.circular(15),
                                   color: Colors.red),
                               child: Padding(
