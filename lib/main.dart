@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:restaurantapp/screens/AccountSettings.dart';
 import 'package:restaurantapp/screens/AddSocialAccounts.dart';
 import 'package:restaurantapp/screens/RefertoFriend.dart';
 import 'package:restaurantapp/screens/browseFood.dart';
@@ -15,6 +16,7 @@ import 'package:restaurantapp/screens/paymentMethod.dart';
 import 'package:restaurantapp/screens/phoneNumberScreen.dart';
 import 'package:restaurantapp/screens/phoneVarificationScreen.dart';
 import 'package:restaurantapp/screens/resetMessage.dart';
+import 'package:restaurantapp/screens/searchResults.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(textTheme),
         useMaterial3: true,
       ),
-      home: CardList(),
+      home: BrowseFoods(),
       routes: {
         CreateAccount.routeName: (ctx) => CreateAccount(),
         FeaturedPartnersScreen.routeName: (ctx) => FeaturedPartnersScreen(),
