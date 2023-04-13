@@ -7,6 +7,21 @@ class FeaturedPartnersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    List images = [
+      'assets/images/food.png',
+      'assets/images/food1.png',
+      'assets/images/food2.png',
+      'assets/images/food3.png',
+      'assets/images/food.png',
+      'assets/images/food1.png',
+      'assets/images/food2.png',
+      'assets/images/food3.png',
+      'assets/images/food.png',
+      'assets/images/food1.png',
+      'assets/images/food2.png',
+      'assets/images/food3.png',
+    ];
+
     return Scaffold(
         bottomNavigationBar: NavigationBar(
           onDestinationSelected: (int index) {},
@@ -57,7 +72,7 @@ class FeaturedPartnersScreen extends StatelessWidget {
                         width: size.width / 2.3,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage('assets/images/no.png'),
+                              image: AssetImage(images[index]),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.red,
@@ -115,9 +130,12 @@ class FeaturedPartnersScreen extends StatelessWidget {
                         ),
                       ),
                       Text("McDonald's", style: TextStyle(fontSize: 20)),
-                      Text(
-                        'Chinese . American',
-                        style: TextStyle(color: Colors.grey),
+                      Padding(
+                        padding: EdgeInsets.only(top: 5, bottom: 15),
+                        child: Text(
+                          'Chinese . American',
+                          style: TextStyle(color: Colors.grey),
+                        ),
                       ),
                     ],
                   ),
@@ -131,9 +149,7 @@ class FeaturedPartnersScreen extends StatelessWidget {
                           width: size.width / 2.3,
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/no.png',
-                                  ),
+                                  image: AssetImage(images[index + 1]),
                                   fit: BoxFit.cover),
                               borderRadius: BorderRadius.circular(15),
                               color: Colors.red),
@@ -192,8 +208,11 @@ class FeaturedPartnersScreen extends StatelessWidget {
                           ),
                         ),
                         Text("McDonald's", style: TextStyle(fontSize: 20)),
-                        Text('Chinese . American',
-                            style: TextStyle(color: Colors.grey)),
+                        Padding(
+                          padding: EdgeInsets.only(top: 5, bottom: 15),
+                          child: Text('Chinese . American',
+                              style: TextStyle(color: Colors.grey)),
+                        ),
                       ],
                     ),
                   ),

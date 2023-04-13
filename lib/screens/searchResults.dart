@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class SearchResults extends StatelessWidget {
   const SearchResults({super.key});
-
+  static const routeName = '/SearchResults';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

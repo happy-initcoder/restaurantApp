@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class PaymentMethod extends StatelessWidget {
   const PaymentMethod({super.key});
-
+  static const routeName = '/PaymentMethod';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

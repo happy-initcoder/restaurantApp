@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:restaurantapp/screens/HomePage.dart';
 import 'package:restaurantapp/screens/createAccount.dart';
 import 'package:restaurantapp/screens/featuredPartner.dart';
 import 'package:restaurantapp/screens/forgetPassword.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
-  static const routeName = '/Chat-Screen';
+  static const routeName = '/LoginScreen';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -102,7 +103,7 @@ class LoginScreen extends StatelessWidget {
               primary: Color.fromRGBO(238, 167, 52, 1),
             ),
             onPressed: () {
-              Navigator.pushNamed(context, FeaturedPartnersScreen.routeName);
+              Navigator.pushNamed(context, HomePage.routeName);
             },
             child: Text(
               'SIGN IN',

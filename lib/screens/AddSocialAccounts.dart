@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AddSocialAccounts extends StatelessWidget {
   const AddSocialAccounts({super.key});
-
+  static const routeName = '/AddSocialAccounts';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

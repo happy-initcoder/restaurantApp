@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:restaurantapp/screens/AccountSettings.dart';
 import 'package:restaurantapp/screens/AddSocialAccounts.dart';
 import 'package:restaurantapp/screens/RefertoFriend.dart';
+import 'package:restaurantapp/screens/SingleRestaurant.dart';
 import 'package:restaurantapp/screens/browseFood.dart';
 import 'package:restaurantapp/screens/cardListScreen.dart';
 import 'package:restaurantapp/screens/createAccount.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(textTheme),
         useMaterial3: true,
       ),
-      home: BrowseFoods(),
+      home: GetStartedPage(),
       routes: {
         CreateAccount.routeName: (ctx) => CreateAccount(),
         FeaturedPartnersScreen.routeName: (ctx) => FeaturedPartnersScreen(),
@@ -48,6 +49,13 @@ class MyApp extends StatelessWidget {
         phoneVarificationScreen.routeName: (ctx) => phoneVarificationScreen(),
         PhoneNumberScreen.routeName: (ctx) => PhoneNumberScreen(),
         ResetEmailScreen.routeName: (ctx) => ResetEmailScreen(),
+        AccountSettigs.routeName: (ctx) => AccountSettigs(),
+        AddSocialAccounts.routeName: (ctx) => AddSocialAccounts(),
+        BrowseFoods.routeName: (ctx) => BrowseFoods(),
+        CardList.routeName: (ctx) => CardList(),
+        PaymentMethod.routeName: (ctx) => PaymentMethod(),
+        ReferToFriendScreen.routeName: (ctx) => ReferToFriendScreen(),
+        SearchResults.routeName: (ctx) => SearchResults(),
       },
     );
   }

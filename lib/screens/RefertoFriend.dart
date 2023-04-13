@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ReferToFriendScreen extends StatelessWidget {
   const ReferToFriendScreen({super.key});
-
+  static const routeName = '/ReferToFriendScreen';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

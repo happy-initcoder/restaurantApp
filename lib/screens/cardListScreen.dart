@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CardList extends StatelessWidget {
   const CardList({super.key});
-
+  static const routeName = '/CardList';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
